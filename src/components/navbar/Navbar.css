@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.logo-text span {
+    font-weight: 600;
+    color: orangered;
+}
+
+.nav-links {
+    display: flex;
+}
