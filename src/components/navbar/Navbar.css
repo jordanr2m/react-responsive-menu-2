@@ -25,3 +25,131 @@
 .nav-links {
     display: flex;
 }
+
+.nav-links li {
+    margin-left: 1rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none; /* get rid of underline with real links */
+}
+
+.nav-links a:hover {
+    color: orangered;
+}
+
+a.btn {
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 5px 8px;
+}
+
+a.btn-dark {
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+a.btn-orange {
+    border: 2px solid transparent; /* makes it stay same size */
+    background: orangered;
+    transition: all 0.2s;
+}
+
+a.btn-orange:hover {
+    color: #fff;
+    padding: 7px 10px; /* creates size on hover */
+}
+
+/* Hide hamburger icon on desktop */
+.navbar .menu-icons {
+    display: none;
+}
+
+
+/* Media query to hide Get Started button on small screens */
+@media screen and (max-width: 769px) {
+    .nav-btn {
+        display: none;
+    }
+}
+
+/* Media query for mobile width */
+@media screen and (max-width: 600px) {
+    .nav-btn {
+        display: block; /* show orange button */
+    }
+
+    .nav-links {
+        display: none; /* Hide top menu on mobile */
+        border: 2px solid #fff;
+    }
+
+    .navbar .menu-icons {
+        display: block; /* show hamburger icon */
+        cursor: pointer;
+    }
+
+    /* Styles for when mobile nav is hidden and show are the same. Only the positioning makes them different */
+    .navbar #mobile-nav-links,
+    .navbar #hide-mobile-nav-links {
+        display: block;
+        position: absolute;
+        /* left: 0; */
+        top: 8rem;
+        width: 100%;
+        background-color: var(--dark-blue);
+        padding-bottom: 5px;
+        transition: all 0.3s; /* applies to left property to create smooth animation (without needing keyframes) */
+        z-index: 111; /* set on top of everything */
+    }
+
+    /* Mobile nav links positioning */
+    .navbar #mobile-nav-links {
+        left: 0;
+        /* animation: slide-in 0.5s ease-in-out; */
+    }
+
+    /* Mobile nav links positioning */
+    .navbar #hide-mobile-nav-links {
+        left: -100%; /* makes it so that it is off page to begin with */
+        /* animation: slide-out 0.5s ease-in-out; */
+    }
+
+    /* Instructor got rid of animations & it still works */
+    /* @keyframes slide-in {
+        0% {
+            transform: translateX(-100%); /* off page to the left */
+       /* }
+        100% {
+            transform: translateX(0); /* move back onto screen */
+       /* }
+    } */
+
+    /* @keyframes slide-out {
+        0% {
+            transform: translateX(0); /* off page to the left */
+        /* }
+        100% {
+            transform: translateX(-100%); /* move back onto screen */
+       /* }
+    } */
+
+    .navbar #mobile-nav-links li,
+    .navbar #hide-mobile-nav-links li {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #fff;
+        margin: 0 3rem;
+    }
+
+    /* Get rid of the border on last list itmem */
+    .navbar #mobile-nav-links li:last-child,
+    .navbar #hide-mobile-nav-links li:last-child {
+        border-bottom: none;
+        margin-top: 0.5rem;
+    }
+}
