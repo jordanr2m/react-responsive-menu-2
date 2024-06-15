@@ -25,6 +25,9 @@ const Navbar = () => {
       </div>
 
       <menu>
+        {/* Add a div here so that when user clicks outside of the mobile menu, the menu disappears */}
+        <div className={showMenu ? " nav-wrapper show-nav-wrapper" : "nav-wrapper"}> </div>
+
         {/* Use id property to show or hide the mobile menu */}
         {/* When a link is clicked, hide the mobile menu */}
         <ul className='nav-links' id={showMenu ? "mobile-nav-links" : "hide-mobile-nav-links"}>

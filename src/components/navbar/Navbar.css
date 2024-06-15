@@ -88,54 +88,47 @@ a.btn-orange:hover {
     }
 
     .navbar .menu-icons {
-        display: block; /* show hamburger icon */
-        cursor: pointer;
+        display: block; /* shows hamburger menu */
     }
 
-    /* Styles for when mobile nav is hidden and show are the same. Only the positioning makes them different */
+    /* Style links the same when shown and hidden, as well as nav wrapper div */
     .navbar #mobile-nav-links,
-    .navbar #hide-mobile-nav-links {
-        display: block;
-        position: absolute;
+    .navbar #hide-mobile-nav-links,
+    .nav-wrapper {
+        position: fixed;
         top: 0;
-        width: 50%;
-        height: 100vh;
-        background-color: rgba(0, 123, 255, 0.8);
-        padding-bottom: 5px;
-        padding-top: 1rem;
-        transition: all 0.3s; /* applies to left property to create smooth animation (without needing keyframes) */
-        z-index: 111; /* set on top of everything */
-    }
-
-    /* Mobile nav links positioning */
-    .navbar #mobile-nav-links {
         left: 0;
-    }
-
-    /* Mobile nav links positioning */
-    .navbar #hide-mobile-nav-links {
-        left: -100%; /* makes it so that it is off page to begin with */
+        height: 100vh;
+        width: 50%;
+        display: block;
+        background-color: rgba(0, 123, 255, 0.8);
+        padding: 2rem;
+        transition: all 0.3s;
     }
 
     .navbar #mobile-nav-links li,
     .navbar #hide-mobile-nav-links li {
-        text-align: left;
-        padding: 1rem 0;
         border-bottom: 1px solid #fff;
-        margin: 0 0 0 1rem;
+        padding: 7px 0 7px 10px;
     }
 
-    a.btn-orange {
-        background-color: transparent;
-        border: 1px solid #fff;
-        margin: 0.5rem 0;
-        display: flex;
-        justify-content: center;
-        padding: 6px;
+    /* Position nav menus */
+    .navbar #mobile-nav-links {
+        transform: translateX(0);
     }
 
-    .navbar #mobile-nav-links li:last-child,
-    .navbar #hide-mobile-nav-links li:last-child {
-        margin-right: 1rem;
+    /* Take it off the page by 200% */
+    .navbar #hide-mobile-nav-links {
+        transform: translateX(200%);
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        transform: translateX(-200%); /* Take it out to the left initially */
+    }
+
+    .show-nav-wrapper {
+        transform: translateX(0); /* Show it (black screen behind menu) */
     }
 }
