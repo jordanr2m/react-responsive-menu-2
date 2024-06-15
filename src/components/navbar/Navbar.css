@@ -85,7 +85,6 @@ a.btn-orange:hover {
 
     .nav-links {
         display: none; /* Hide top menu on mobile */
-        border: 2px solid #fff;
     }
 
     .navbar .menu-icons {
@@ -98,11 +97,12 @@ a.btn-orange:hover {
     .navbar #hide-mobile-nav-links {
         display: block;
         position: absolute;
-        /* left: 0; */
-        top: 8rem;
-        width: 100%;
-        background-color: var(--dark-blue);
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(0, 123, 255, 0.8);
         padding-bottom: 5px;
+        padding-top: 1rem;
         transition: all 0.3s; /* applies to left property to create smooth animation (without needing keyframes) */
         z-index: 111; /* set on top of everything */
     }
@@ -110,46 +110,32 @@ a.btn-orange:hover {
     /* Mobile nav links positioning */
     .navbar #mobile-nav-links {
         left: 0;
-        /* animation: slide-in 0.5s ease-in-out; */
     }
 
     /* Mobile nav links positioning */
     .navbar #hide-mobile-nav-links {
         left: -100%; /* makes it so that it is off page to begin with */
-        /* animation: slide-out 0.5s ease-in-out; */
     }
-
-    /* Instructor got rid of animations & it still works */
-    /* @keyframes slide-in {
-        0% {
-            transform: translateX(-100%); /* off page to the left */
-       /* }
-        100% {
-            transform: translateX(0); /* move back onto screen */
-       /* }
-    } */
-
-    /* @keyframes slide-out {
-        0% {
-            transform: translateX(0); /* off page to the left */
-        /* }
-        100% {
-            transform: translateX(-100%); /* move back onto screen */
-       /* }
-    } */
 
     .navbar #mobile-nav-links li,
     .navbar #hide-mobile-nav-links li {
-        text-align: center;
+        text-align: left;
         padding: 1rem 0;
         border-bottom: 1px solid #fff;
-        margin: 0 3rem;
+        margin: 0 0 0 1rem;
     }
 
-    /* Get rid of the border on last list itmem */
+    a.btn-orange {
+        background-color: transparent;
+        border: 1px solid #fff;
+        margin: 0.5rem 0;
+        display: flex;
+        justify-content: center;
+        padding: 6px;
+    }
+
     .navbar #mobile-nav-links li:last-child,
     .navbar #hide-mobile-nav-links li:last-child {
-        border-bottom: none;
-        margin-top: 0.5rem;
+        margin-right: 1rem;
     }
 }
