@@ -26,7 +26,7 @@ const Navbar = () => {
 
       <menu>
         {/* Add a div here so that when user clicks outside of the mobile menu, the menu disappears (black div that takes 50% of screen) */}
-        <div className={showMenu ? " nav-wrapper show-nav-wrapper" : "nav-wrapper"}> </div>
+        <div className={showMenu ? " nav-wrapper show-nav-wrapper" : "nav-wrapper"} onClick={hideMenu}> </div>
 
         {/* Use id property to show or hide the mobile menu */}
         {/* When a link is clicked, hide the mobile menu */}
