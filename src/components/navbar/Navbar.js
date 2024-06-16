@@ -35,7 +35,7 @@ const Navbar = () => {
           <li onClick={hideMenu}><a href="#">Features</a></li>
           <li onClick={hideMenu}><a href="#">Download</a></li>
           <li onClick={hideMenu}><a href="#">Subscribe</a></li>
-          <li onClick={hideMenu} className='nav-btn'><a className="btn btn-orange" href="#">Get Started</a></li>
+          <li onClick={hideMenu} className='nav-btn'><a className="btn btn-dark" href="#">Get Started</a></li>
         </ul>
       </menu>
 

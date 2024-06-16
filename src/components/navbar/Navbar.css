@@ -110,7 +110,8 @@ a.btn-orange:hover {
     .navbar #mobile-nav-links li,
     .navbar #hide-mobile-nav-links li {
         border-bottom: 1px solid #fff;
-        padding: 7px 0 7px 10px;
+        padding: 7px 0;
+        margin-left: 0;
     }
 
     /* Position nav menus */
@@ -131,5 +132,11 @@ a.btn-orange:hover {
 
     .show-nav-wrapper {
         transform: translateX(0); /* Show it (black screen behind menu) */
+    }
+
+    /* Make button full width */
+    .btn {
+        display: block;
+        text-align: center;
     }
 }
