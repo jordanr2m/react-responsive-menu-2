@@ -89,6 +89,7 @@ a.btn-orange:hover {
 
     .navbar .menu-icons {
         display: block; /* shows hamburger menu */
+        z-index: 11; /* place x icon on top */
     }
 
     /* Style links the same when shown and hidden, as well as nav wrapper div */
